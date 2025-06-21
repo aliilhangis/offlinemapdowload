@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offline Harita İndirici</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 id="title">🌍 Offline Harita İndirici</h1>
+            <p id="subtitle">Seyahate çıkmadan önce haritanı indir, çevrimdışı gezmeye hazır ol!</p>
+        </header>
+
+        <main>
+            <div class="search-container">
+                <input type="text" id="city-search" placeholder="Şehir adı girin...">
+                <button id="search-button">Ara</button>
+            </div>
+            <div id="map-link-container" class="map-link-container"></div>
+
+            <div class="suggestions-container">
+                <h2 id="suggestion-title">Yakındaki popüler yerler</h2>
+                <div id="suggestions" class="suggestions"></div>
+            </div>
+
+            <div class="popular-cities-container">
+                <h2 id="popular-title">Popüler Şehirler</h2>
+                <div id="popular-cities" class="popular-cities"></div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Made with ❤️ for travellers.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
