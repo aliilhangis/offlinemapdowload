@@ -22,6 +22,11 @@ body {
     text-align: center;
 }
 
+#logo {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
 header h1 {
     font-size: 2.5rem;
     font-weight: 700;
@@ -125,6 +130,28 @@ h2 {
 .city-chip:hover {
     background: rgba(255, 255, 255, 0.4);
     transform: translateY(-2px);
+}
+
+.guide-container {
+    margin-top: 40px;
+    text-align: left;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 20px 30px;
+    border-radius: 10px;
+}
+
+.guide-container h2 {
+    text-align: center;
+}
+
+.guide-container ol {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.guide-container li {
+    margin-bottom: 10px;
+    line-height: 1.6;
 }
 
 footer {
