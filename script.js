@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const popularCitiesContainer = document.getElementById('popular-cities');
     const suggestionsContainer = document.getElementById('suggestions');
     const suggestionsWrapper = document.querySelector('.suggestions-container');
+    const guideTitleEl = document.getElementById('guide-title');
+    const guideStepsEl = document.getElementById('guide-steps');
 
     // --- Language and Text Data ---
     const texts = {
@@ -17,7 +19,12 @@ document.addEventListener('DOMContentLoaded', () => {
             searchButton: "Ara",
             downloadPrompt: "Haritayı İndirmek İçin Tıkla",
             suggestionTitle: "Yakındaki popüler yerler",
-            popularTitle: "Popüler Şehirler"
+            popularTitle: "Popüler Şehirler",
+            guideTitle: "Çevrimdışı Harita Nasıl İndirilir?",
+            guideStep1: "Google Haritalar'da profil resminize dokunun.",
+            guideStep2: "'Çevrimdışı haritalar'ı seçin.",
+            guideStep3: "'Kendi haritanızı seçin'e dokunun.",
+            guideStep4: "İndirmek istediğiniz alanı ayarlayın ve 'İndir'e dokunun."
         },
         en: {
             title: "🌍 Offline Map Downloader",
@@ -26,7 +33,12 @@ document.addEventListener('DOMContentLoaded', () => {
             searchButton: "Search",
             downloadPrompt: "Click to Download The Map",
             suggestionTitle: "Nearby popular places",
-            popularTitle: "Popular Cities"
+            popularTitle: "Popular Cities",
+            guideTitle: "How to Download an Offline Map?",
+            guideStep1: "In Google Maps, tap your profile picture.",
+            guideStep2: "Select 'Offline maps'.",
+            guideStep3: "Tap 'Select your own map'.",
+            guideStep4: "Adjust the area you want to download and tap 'Download'."
         }
     };
 
@@ -54,6 +66,16 @@ document.addEventListener('DOMContentLoaded', () => {
         searchButton.textContent = t.searchButton;
         document.getElementById('suggestion-title').textContent = t.suggestionTitle;
         document.getElementById('popular-title').textContent = t.popularTitle;
+
+        // Set guide text
+        guideTitleEl.textContent = t.guideTitle;
+        guideStepsEl.innerHTML = `
+            <li>${t.guideStep1}</li>
+            <li>${t.guideStep2}</li>
+            <li>${t.guideStep3}</li>
+            <li>${t.guideStep4}</li>
+        `;
+
         // Store lang for later use
         document.documentElement.lang = lang;
     };
